@@ -15,8 +15,8 @@
 
   <div text-center class="headline">
     <!-- pon tu nombre aqui -->
-     <h2>Misty Blunch</h2>
-     <p>Grace Nikole</p>
+     <h2>{{datos.nombre}}</h2>
+     <p>{{datos.nickname}}</p>
   </div>
 
 
@@ -28,42 +28,43 @@
 
         <ion-item>
           <ion-icon name="flag" item-start></ion-icon>
-            <h2>Origen</h2>
+            <h2>{{origen.titulo}}</h2>
                <p>
-                 Lima, Peru
+                 {{origen.dato}}
                </p>
         </ion-item>
 
 
         <ion-item>
           <ion-icon name="mail" item-start></ion-icon>
-            <h2>E-mail</h2>
+            <h2>{{email.titulo}}</h2>
               <p>
-               gracenikole@gmail.com
+               {{email.dato}}
               </p>
          </ion-item>
 
 
         <ion-item>
           <ion-icon name="phone-portrait" item-start></ion-icon>
-            <h2>Phone</h2>
+            <h2>{{phone.titulo}}</h2>
               <p>
-               959851104
+               {{phone.dato}}
               </p>
         </ion-item>
 
         <ion-item>
           <ion-icon name="logo-bitcoin" item-start></ion-icon>
-            <h2>BTC address</h2>
+            <h2>{{btc.titulo}}</h2>
              <p>
-              sSDI993nldioHIOW53hf
+              {{btc.dato}}
              </p>
         </ion-item> <!-- aquí está la descripcion de la app -->  <!-- aquí está el <ion-list no-lines> -->
       </ion-list>
        </ion-slide>
 
        <ion-slide>
-         <p>Hola, soy Grace.</p>
+         <p>Hola, soy {{datos.nombre}}.</p>
+         <p>Tengo {{datos.edad}} años.</p>
        </ion-slide>
     </ion-slides>
 
