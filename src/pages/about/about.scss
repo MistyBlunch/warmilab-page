@@ -3,9 +3,15 @@ page-about {
   .banner {
 
     .background {
-
+      opacity: 0.7; //70%
     }
     .avatar {
+      height: 120px;
+
+      border-radius: 50%;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
 
     }
   }
@@ -14,7 +20,7 @@ page-about {
   }
 
   ion-slides {
-    
+
   }
 
 }

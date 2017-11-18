@@ -1,17 +1,95 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+   <ion-navbar>
+     <ion-title>
       Perfil
-    </ion-title>
-  </ion-navbar>
+     </ion-title>
+   </ion-navbar>
 </ion-header>
 
 <ion-content no-padding>
-  <div class="banner">
-    <!-- las imagenes aqui -->
-  </div>
+   <div class="banner">
+   <!-- las imagenes aqui -->
+     <img src="assets/img/portada.jpg" class="background"/>
+     <img src="assets/img/perfil.jpg" class="avatar"/>
+   </div>
+
   <div text-center class="headline">
     <!-- pon tu nombre aqui -->
+     <h2>Misty Blunch</h2>
+     <p>Grace Nikole</p>
   </div>
+
+
   <!-- lista de datos a partir de aqui -->
+  <div>
+    <ion-slides pager>
+       <ion-slide>
+         <ion-list no-lines>
+
+        <ion-item>
+          <ion-icon name="flag" item-start></ion-icon>
+            <h2>Origen</h2>
+               <p>
+                 Lima, Peru
+               </p>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-icon name="mail" item-start></ion-icon>
+            <h2>E-mail</h2>
+              <p>
+               gracenikole@gmail.com
+              </p>
+         </ion-item>
+
+
+        <ion-item>
+          <ion-icon name="phone-portrait" item-start></ion-icon>
+            <h2>Phone</h2>
+              <p>
+               959851104
+              </p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="logo-bitcoin" item-start></ion-icon>
+            <h2>BTC address</h2>
+             <p>
+              sSDI993nldioHIOW53hf
+             </p>
+        </ion-item> <!-- aquí está la descripcion de la app -->  <!-- aquí está el <ion-list no-lines> -->
+      </ion-list>
+       </ion-slide>
+
+       <ion-slide>
+         <p>Hola, soy Grace.</p>
+       </ion-slide>
+    </ion-slides>
+
+
+  </div>
+
+  <div text-center>
+    <ion-row> <!-- Para crear un fila -->
+       <ion-col> <!-- Para crear una columna -->
+         <button ion-button icon-only clear>
+           <ion-icon name="logo-facebook"></ion-icon>
+         </button>
+       </ion-col>
+
+       <ion-col>
+         <button ion-button icon-only clear>
+           <ion-icon name="logo-instagram"></ion-icon>
+         </button>
+       </ion-col>
+
+       <ion-col>
+         <button ion-button icon-only clear>
+           <ion-icon name="logo-twitter"></ion-icon>
+         </button>
+       </ion-col>
+    </ion-row>
+
+  </div>
 </ion-content>
