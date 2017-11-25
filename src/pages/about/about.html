@@ -24,41 +24,16 @@
   <div>
     <ion-slides pager>
        <ion-slide>
-         <ion-list no-lines>
-
-        <ion-item>
-          <ion-icon name="flag" item-start></ion-icon>
-            <h2>{{origen.titulo}}</h2>
+         <!-- LISTAS | -->
+      <ion-list no-lines> <!-- aquí está la descripcion de la app -->  <!-- aquí está el <ion-list no-lines> -->
+        <ion-item *ngFor = "let info of informacion"> <!-- ngFor es para hacer repeticiones -->
+          <ion-icon [name] = "info.icono" item-start></ion-icon>
+            <h2>{{info.titulo}}</h2>
                <p>
-                 {{origen.dato}}
+                 {{info.dato}}
                </p>
         </ion-item>
 
-
-        <ion-item>
-          <ion-icon name="mail" item-start></ion-icon>
-            <h2>{{email.titulo}}</h2>
-              <p>
-               {{email.dato}}
-              </p>
-         </ion-item>
-
-
-        <ion-item>
-          <ion-icon name="phone-portrait" item-start></ion-icon>
-            <h2>{{phone.titulo}}</h2>
-              <p>
-               {{phone.dato}}
-              </p>
-        </ion-item>
-
-        <ion-item>
-          <ion-icon name="logo-bitcoin" item-start></ion-icon>
-            <h2>{{btc.titulo}}</h2>
-             <p>
-              {{btc.dato}}
-             </p>
-        </ion-item> <!-- aquí está la descripcion de la app -->  <!-- aquí está el <ion-list no-lines> -->
       </ion-list>
        </ion-slide>
 

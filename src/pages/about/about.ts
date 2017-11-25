@@ -10,6 +10,18 @@ export class AboutPage {
   nickname: string = "Misty Blunch";
   edad: number = 16;
 
+  datos2:any = {
+      origen:"Origen",
+      email: "E-mail",
+      phone:"Phone",
+      bitcoin: "BTC address",
+
+      pais: "Lima, Peru",
+      myemail:"gracenikole@hotmailcom",
+      numerotelef: 959851104,
+      btcaddress: "sSDI993nldioHIOW53hf"
+    };
+
 
   datos: any = {
     nombre: "Grace Nikole",
@@ -17,25 +29,32 @@ export class AboutPage {
     edad: 16
   };
 
-  origen: any ={
-    titulo: "Origen",
-    dato: "Lima, Peru"
-  };
+ informacion: any[] = [
+   {
+     titulo: "Origen",
+     dato: "Lima, Peru",
+     icono: "flag"
+   },
 
-  email: any ={
-    titulo: "E-mail",
-    dato: "gracenikole@hotmailcom"
-  };
+   {
+     titulo: "E-mail",
+     dato: "gracenikole@hotmailcom",
+     icono: "mail"
+   },
 
-  phone: any ={
-    titulo: "Phone",
-    dato: 959851104
-  };
+   {
+     titulo: "Phone",
+     dato: 959851104,
+     icono: "call"
+   },
 
-  btc: any ={
-    titulo: "BTC address",
-    dato: "sSDI993nldioHIOW53hf"
-  };
+   {
+     titulo: "BTC address",
+     dato: "sSDI993nldioHIOW53hf",
+     icono: "logo-bitcoin"
+   }
+ ];
+
 
   constructor(public navCtrl: NavController) {
 
