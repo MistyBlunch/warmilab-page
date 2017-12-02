@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content no-padding>
+
    <div class="banner">
    <!-- las imagenes aqui -->
      <img src="assets/img/portada.jpg" class="background"/>
@@ -24,6 +25,21 @@
   <div>
     <ion-slides pager>
        <ion-slide>
+
+           <ion-item>
+             <ion-label floating>Titulo</ion-label>
+             <ion-input type="text" #tituloInput></ion-input>
+           </ion-item>
+
+           <ion-item>
+             <ion-label floating>Dato</ion-label>
+             <ion-input type="text" #datoInput></ion-input>
+           </ion-item>
+
+           <div padding>
+           <button ion-button block (click)="agregarDato(tituloInput.value, datoInput.value, 'heart')">Agregar</button>
+           </div>
+
          <!-- LISTAS | -->
       <ion-list no-lines> <!-- aquí está la descripcion de la app -->  <!-- aquí está el <ion-list no-lines> -->
         <ion-item *ngFor = "let info of informacion"> <!-- ngFor es para hacer repeticiones -->

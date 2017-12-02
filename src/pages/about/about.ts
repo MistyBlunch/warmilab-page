@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
-export class AboutPage {
+export class AboutPage implements OnInit {
+
   nombre: string = "Grace Nikole";
   nickname: string = "Misty Blunch";
   edad: number = 16;
@@ -29,6 +30,7 @@ export class AboutPage {
     edad: 16
   };
 
+
  informacion: any[] = [
    {
      titulo: "Origen",
@@ -50,14 +52,38 @@ export class AboutPage {
 
    {
      titulo: "BTC address",
-     dato: "sSDI993nldioHIOW53hf",
+     dato: "KIWQ328734BSKDBAS87",
      icono: "logo-bitcoin"
+   },
+
+   {
+     titulo: "Hobby",
+     dato: "Aprender cosas nuevas y salir",
+     icono: "alarm"
    }
  ];
 
 
   constructor(public navCtrl: NavController) {
+  }
 
+  ngOnInit() {
+    this.agregarDato("Mascota", "perro", "heart");
+    this.agregarDato("Lugar Fav", "Orilla del mar", "heart" );
+    this.agregarDato("Curso Fav", "Física", "heart");
+    this.agregarDato("Fecha de nacimiento", "18/02/01", "heart");
+    this.agregarDato("BFF", "Ibeth", "heart");
+
+
+  }
+  agregarDato(nuevoTitulo: string,nuevoDato: string, nuevoIcono:string) {
+    if (nuevoTitulo !== "" && nuevoDato !== ""){
+      this.informacion.push({
+        titulo: nuevoTitulo,
+        dato: nuevoDato,
+        icono: nuevoIcono
+      });
+    }
   }
 
 }

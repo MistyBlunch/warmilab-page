@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   quehaceres: Todo[] = [
     {
       description: "Lavar los platos",
-      done: false 
+      done: false
     },
 
     {
@@ -52,6 +52,18 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     // codigo al iniciar el componente
+    this.agregarQuehacer("comer", true);
+    this.agregarQuehacer("pasear", false);
+    this.agregarQuehacer("arnar un cubo Rubik", false);
+  }
+
+  agregarQuehacer(nuevoQuehacer: string, terminado: boolean) {
+    if (nuevoQuehacer !== "") {
+      this.quehaceres.push({
+        description: nuevoQuehacer,
+        done: terminado
+    });
+   }
   }
 
   addTodo(todo: string) {
